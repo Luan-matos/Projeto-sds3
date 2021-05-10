@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { stringify } from 'node:querystring';
 import { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts'
 import { SaleSucess } from 'types/sale';
@@ -18,7 +17,7 @@ type ChartData = {
     series: SeriesData[];
 }
 
-function BarChart() {
+const BarChart = () => {
     
     const [chartData, setChartData] = useState<ChartData>({
         labels: {
